@@ -83,11 +83,7 @@ VALUES
 (3, 'Networks Inc', '789 Oak St', '+1 111 222 333', 3),
 (4, 'CloudTech', '246 Elm St', '+1 444 555 666', 4),
 (5, 'Software Solutions', '369 Maple Rd', '+1 777 888 999', 5),
-(6, 'Cyber Systems', '159 Pine St', '+1 123 231 321', 1),
-(7, 'IT Innovations', '753 Cedar Blvd', '+1 111 222 333', 2),
-(8, 'Digital Dynamics', '951 Rose St', '+1 555 666 777', 3),
-(9, 'TechThink', '147 Tulip Ave', '+1 999 888 777', 4),
-(10, 'Innovate IT', '753 Daisy Rd', '+1 555 555 555', 5);
+(6, 'Cyber Systems', '159 Pine St', '+1 123 231 321', 1);
 
 
 INSERT INTO CARGO (ID, NOME_CARGO, VALOR_SALARIO)
@@ -97,11 +93,7 @@ VALUES
 (3, 'Analista de Sistemas', 90000),
 (4, 'Administrador de Banco de Dados', 95000),
 (5, 'Arquiteto de Soluções', 125000),
-(6, 'Engenheiro de Software', 80000),
-(7, 'Técnico em Segurança da Informação', 72000),
-(8, 'Consultor de TI', 100000),
-(9, 'Desenvolvedor de Aplicativos Móveis', 78000),
-(10, 'Engenheiro de Rede', 92000);
+(6, 'Engenheiro de Software', 80000);
 
 
 INSERT INTO FUNCIONARIOS (ID, NOME, CARGO, IDADE, SEXO, TELEFONE, PAIS_DE_NASCIMENTO, PAIS_DE_TRABALHO, ENDERECO_RESIDENCIAL)
@@ -111,11 +103,15 @@ VALUES
 (3, 'Pedro Rodrigues', 3, 28, 'M', '+351 9 12345-6789', 'Portugal', 3, 'Rua de Lisboa, 246'),
 (4, 'Ana Oliveira', 4, 35, 'F', '+353 1 12345-6789', 'Irlanda', 4, 'Dublin Street, 369'),
 (5, 'Luís Sousa', 5, 45, 'M', '+39 3 12345-6789', 'Itália', 5, 'Roma Street, 159'),
-(6, 'Isabel Silva', 6, 50, 'F', '+44 20 12345-6789', 'Reino Unido', 6, 'London Road, 753'),
-(7, 'Fábio Pereira', 1, 25, 'M', '+55 11 12345-6789', 'Brasil', 1, 'Rua das Palmas, 258'),
-(8, 'Carla Oliveira', 2, 30, 'F', '+33 6 98765-4321', 'França', 2, 'Avenue des Tuileries, 147'),
-(9, 'Ricardo Silva', 3, 40, 'M', '+351 9 98765-4321', 'Portugal', 3, 'Rua de Porto, 852'),
-(10, 'Sofia Rodrigues', 4, 27, 'F', '+353 1 98765-4321', 'Irlanda', 4, 'Galway Road, 963');
+(6, 'Isabel Silva', 6, 50, 'F', '+44 20 12345-6789', 'Reino Unido', 6, 'London Road, 753');
+
+INSERT INTO CONTAS_BANCARIAS (ID, AGENCIA, BANCO, CONTA_CORRENTE, FUNCIONARIO, PAIS)
+VALUES (1, '1234', 'Banco do Brasil', '123456789', 1, 1),
+(2, '2345', 'Itau', '987654321', 2, 2),
+(3, '3456', 'Santander', '654321987', 3, 3),
+(4, '4567', 'Bradesco', '456789123', 4, 4),
+(5, '5678', 'Caixa', '789123456', 5, 5),
+(6, '6789', 'Banco Inter', '369258147', 6, 6);
 
 
 
@@ -131,7 +127,10 @@ INNER JOIN CARGO ON FUNCIONARIOS.CARGO = CARGO.ID
 INNER JOIN EMPRESAS ON FUNCIONARIOS.PAIS_DE_TRABALHO = EMPRESAS.PAIS
 INNER JOIN PAISES ON FUNCIONARIOS.PAIS_DE_TRABALHO = PAISES.ID;
 
-
 SELECT * FROM FUNCIONARIOS
+
+
+(S.SALARIO_BRUTO - (S.SALARIO_BRUTO * (P.TAXA_IMPOSTO/100)))
+(CARGO.VALOR_SALARIO - (CARGO.VALOR_SALARIO * (PAISES.TAXA_IMPOSTO/100)))
 
 
