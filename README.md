@@ -134,3 +134,56 @@ SELECT * FROM FUNCIONARIOS
 (CARGO.VALOR_SALARIO - (CARGO.VALOR_SALARIO * (PAISES.TAXA_IMPOSTO/100)))
 
 
+
+
+Portugal() {
+    salary = document.getElementById("salario").value;
+    var tax_one = 14.5  < 7112
+    var tax_two = 23.0 >= 7112
+    var tax_three = 28.5 >= 10732 E < 20332
+    var tax_fourth = 35.0 >= 20322 && salary < 25075
+    var tax_fifth = 37.0 >= 25075 && salary < 36967
+    var tax_sixth = 45.0 > 36967 && salary < 80882
+    var tax_seventh = 48.0  >= 80882
+
+
+ 
+
+Irlanda() {
+    var text = "Se gasta pouco na Irlanda";
+    salary = document.getElementById("salario").value;
+    var tax_one = 20 <= 36800
+    var tax_two = 40 > 12012 && salary <= 21295
+
+ReinoUnido() {
+   
+    var tax_one = 0 < 9880  
+    var tax_two = 20 <= 12570
+    var tax_three = 40 <= 50270
+    var tax_fourth = 45 >= 150000
+
+
+
+ Italia() {
+    
+    var tax_one = 23 <= 15000
+    var tax_two = 25 > 15000 && salary <= 28000
+    var tax_three = 35 >= 28001 && salary < 55000
+    var tax_fourth = 43 > 55001
+
+
+
+Espanha() {
+               = 0 < 5550
+    var tax_one = 19 > 5550 && salary <= 12450
+    var tax_two = 24 > 12450 && salary <= 20200
+    var tax_three = 30 > 20200 && salary <= 35200
+    var tax_fourth = 37 > 35200 && salary <= 60000
+    var tax_fifth = 45 >= 60000
+
+
+Franca() salary <= 35000)  - 9043
+ (salary > 35000 && salary <= 40000)  
+
+
+
